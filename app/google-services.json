@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "258253534189",
+    "project_id": "organizese-f4feb",
+    "storage_bucket": "organizese-f4feb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258253534189:android:3cff2893c24735bda86de4",
+        "android_client_info": {
+          "package_name": "com.example.organizese"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258253534189-tbv150kfpqsc68muj79r364hhce2hvbr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.organizese",
+            "certificate_hash": "f614def911dab461ef73d07f4ba9994482c1f573"
+          }
+        },
+        {
+          "client_id": "258253534189-9pqsedcq25l013sf4255o4ttm0827ft4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-FpAZapDr7ZDszQiYNu2X5Ooz0EiVB7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258253534189-9pqsedcq25l013sf4255o4ttm0827ft4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
