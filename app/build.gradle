@@ -48,6 +48,8 @@ dependencies {
 
     //Slider library
     implementation 'com.heinrichreimersoftware:material-intro:7221502f1f'
+    implementation 'androidx.navigation:navigation-fragment:2.3.4'
+    implementation 'androidx.navigation:navigation-ui:2.3.4'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
