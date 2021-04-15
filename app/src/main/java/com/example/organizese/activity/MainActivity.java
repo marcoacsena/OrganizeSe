@@ -10,11 +10,14 @@ import android.view.View;
 import com.example.organizese.R;
 import com.example.organizese.activity.CadastroActivity;
 import com.example.organizese.activity.LoginActivity;
+import com.google.firebase.auth.FirebaseAuth;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 import com.heinrichreimersoftware.materialintro.slide.SimpleSlide;
 
 public class MainActivity extends IntroActivity {
+
+    private FirebaseAuth autenticacao = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,20 @@ public class MainActivity extends IntroActivity {
                 .background(android.R.color.holo_orange_light)
                 .fragment(R.layout.intro_cadastro)
                 .build());
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        verificarUsuarioLogado();
+    }
+
+    private void verificarUsuarioLogado() {
+        if(autenticacao.getCurrentUser() != null){
+
+            startActivity(new Intent(this, PrincipalActivity.class));
+
+        }
     }
 
     public void btnCadastrar(View v){

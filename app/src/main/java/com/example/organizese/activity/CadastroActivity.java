@@ -3,6 +3,7 @@ package com.example.organizese.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
 import android.view.View;
@@ -85,16 +86,13 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(CadastroActivity.this,
-                            "Sucesso ao cadastrar o Usuário",
-                            Toast.LENGTH_SHORT).show();
-
+                    finish();
+                }
                 //Tratamento de exceção ao usar o Firebase
-                }else {
+                else {
 
                     String excecao = "";
                     try {
-
                         throw task.getException();
 
                     }catch (FirebaseAuthWeakPasswordException e){
@@ -109,8 +107,8 @@ public class CadastroActivity extends AppCompatActivity {
                         //Para exibir a exeção no Logcat
                         e.printStackTrace();
                     }
-
-                    Toast.makeText(CadastroActivity.this, excecao, Toast.LENGTH_SHORT).show();}
+                    Toast.makeText(CadastroActivity.this, excecao, Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
